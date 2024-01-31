@@ -12,16 +12,17 @@ let gridElement= document.querySelector("#grid");
 
 for(let i=1; i<=100; i++){
     let result="";
-
+    
     if(i % 3 == 0){
-        result += "Fizz"
+        result += "Fizz";
     }
     if(i % 5 == 0){
-        result+="Buzz"
-    }else{
+        result+="Buzz";
+    }
+    if(result == ""){
         result = i;
     }
-
+    
     const newElement= document.createElement("div");
     newElement.innerHTML= result;
 
