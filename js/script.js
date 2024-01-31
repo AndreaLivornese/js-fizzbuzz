@@ -7,15 +7,24 @@ Per i numeri che sono sia multipli di 3 che di 5 stampi “FizzBuzz”.
 
 */
 
+let gridElement= document.querySelector("#grid");
+
 
 for(let i=1; i<=100; i++){
-    if(i % 3 == 0 && i % 5 == 0){
-        console.log("FizzBuzz");
-    }else if(i % 3 == 0){
-        console.log("Fizz");
-    }else if(i % 5 == 0){
-        console.log("Buzz");
-    }else{
-        console.log(i);
+    let result="";
+
+    if(i % 3 == 0){
+        result += "Fizz"
     }
+    if(i % 5 == 0){
+        result+="Buzz"
+    }else{
+        result = i;
+    }
+
+    const newElement= document.createElement("div");
+    newElement.innerHTML= result;
+
+
+    gridElement.append(newElement);
 }
