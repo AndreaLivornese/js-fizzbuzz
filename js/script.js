@@ -12,18 +12,22 @@ let gridElement= document.querySelector("#grid");
 
 for(let i=1; i<=100; i++){
     let result="";
+    const newElement= document.createElement("div");
+    newElement.className="square"
     
     if(i % 3 == 0){
         result += "Fizz";
+        newElement.className+=" tree";
     }
     if(i % 5 == 0){
         result+="Buzz";
+        newElement.className+=" five";
     }
     if(result == ""){
         result = i;
+        newElement.className+=" number";
     }
     
-    const newElement= document.createElement("div");
     newElement.innerHTML= result;
 
 
